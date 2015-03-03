@@ -5,7 +5,7 @@ defmodule API.Test do
   plug :dispatch
 
   match _ do
-    send_resp(conn, 200, "You asked for #{Conn.full_path(conn)}")
+    send_resp(conn, 200, "You asked for #{full_path(conn)}")
   end
 
 end
