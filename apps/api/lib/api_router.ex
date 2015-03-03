@@ -2,7 +2,8 @@ defmodule API.Router do
   use Plug.Router
 
   # Dispatching to more specific routers
-  forward "/test", to: API.Test
+  forward "/device", to: API.Device
+  forward "/test",   to: API.Test
 
   # Pipeline for handling other requests
   plug :match

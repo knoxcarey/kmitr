@@ -1,8 +1,8 @@
-defmodule API.App.Mixfile do
+defmodule Device.API.Mixfile do
   use Mix.Project
 
   def project do
-    [app: :api,
+    [app: :device,
      version: "0.0.1",
      deps_path: "../../deps",
      lockfile: "../../mix.lock",
@@ -11,16 +11,13 @@ defmodule API.App.Mixfile do
   end
 
   def application do
-    [
-      applications: [:logger, :cowboy, :plug], 
-      mod: {API.App, []}]
+    [applications: [:logger],
+     mod: {Device.App, []}]
   end
 
   defp deps do
     [
-      {:cowboy, "~> 1.0.0"},
-      {:plug,   "~> 0.11.0"},
-      {:msgpax, "~> 0.6"}
+      {:exactor,   "~> 2.0.1"}
     ]
   end
 end
